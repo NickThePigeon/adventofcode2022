@@ -55,9 +55,6 @@ int	main(void)
 				// std::cout << "unique char = " << static_cast<char>(i) << std::endl;
 			}
 		}
-		// std::cout << "first half = " << first_half << std::endl; 
-		// std::cout << "second half = " << second_half << std::endl; 
-
 	}
 	std::cout << "the total score = " << sum << std::endl;
 	return (0);
