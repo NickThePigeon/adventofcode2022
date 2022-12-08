@@ -32,11 +32,11 @@ int	main(void)
 {
 	std::ifstream	inputfile;
 	std::string		inputline;
-	int				sum;
+	int				size;
 	std::vector<std::string> opendirs;
 	std::map<std::string, int>	dirs;
 
-	sum = 0;
+	size = 0;
 	inputfile.open("file.txt");
 
 	while (std::getline(inputfile, inputline))
@@ -52,12 +52,11 @@ int	main(void)
 			opendirs.push_back(gen_random(3) + inputline);
 		else if (isdigit(inputline[0]))
 		{
-			sum = atoi(inputline.c_str());
+			size = atoi(inputline.c_str());
 			for (opendirs_iter it = opendirs.cbegin(); it != opendirs.cend(); ++it)
 			{
-				dirs[*it] += sum;
+				dirs[*it] += size;
 			}
-			sum = 0;
 		}
 	}
 	int totalsum1 = 0;
