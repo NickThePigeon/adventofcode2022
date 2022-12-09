@@ -26,11 +26,11 @@ int		count_trees(std::vector<std::vector<int>> map)
 		{
 			if (map[y][x] > map[y][x + 1])
 				visible_trees++;
-			else if (map[y][x] > map[y + 1][x + 1])
-				visible_trees++;
-			else if (map[y][x] > map[y - 1][x - 1])
+			else if (map[y][x] > map[y][x - 1])
 				visible_trees++;
 			else if (map[y][x] > map[y - 1][x])
+				visible_trees++;
+			else if (map[y][x] > map[y + 1][x])
 				visible_trees++;
 		}
 	}
